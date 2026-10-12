@@ -1,0 +1,19 @@
+review_text,sentiment
+"I love this product, it works great and the quality is excellent",Positive
+"Very happy with the purchase, easy to use and reliable",Positive
+"Great quality and fast delivery, I would recommend it",Positive
+Excellent value for money and the design looks beautiful,Positive
+Works perfectly and exceeded my expectations,Positive
+"Comfortable, useful, and worth the price",Positive
+The product is fantastic and I am very satisfied,Positive
+"Very disappointed, the product broke after two days",Negative
+Poor quality and terrible customer service,Negative
+It does not work properly and is not worth the money,Negative
+The item arrived damaged and missing parts,Negative
+Battery life is awful and charging takes too long,Negative
+"Bad experience, the material feels cheap and weak",Negative
+The product arrived yesterday and has a standard design,Neutral
+It is available in three colors and two sizes,Neutral
+"The package contains the device, cable, and manual",Neutral
+The item is similar to the description on the website,Neutral
+The product weighs about one kilogram and measures twenty centimeters,Neutral

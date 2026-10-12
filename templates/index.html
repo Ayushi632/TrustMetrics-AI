@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustMetrics AI | Review Analyzer</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<nav class="nav"><a class="brand" href="/">◈ TrustMetrics <span>AI</span></a><div><a class="active" href="/">Analyzer</a><a href="/history">History</a></div></nav>
+<main class="container">
+<section class="hero"><div class="eyebrow">✦ AI-POWERED REVIEW INTELLIGENCE</div><h1>Know what's <span>real.</span></h1><p>Analyze product reviews for potential fake patterns and understand the sentiment behind every word.</p></section>
+<section class="panel"><div class="panel-head"><div><h2>Review Analyzer</h2><p>Paste a product review below to get started.</p></div><span class="tag">TF-IDF + ML</span></div>
+<label for="review">CUSTOMER REVIEW</label><textarea id="review" maxlength="5000" placeholder="Example: The product quality is great, delivery was fast, and it works as described..."></textarea>
+<div class="counter"><span id="count">0 / 5000 characters</span><button id="clear" class="link-button">Clear text</button></div>
+<div class="actions"><button id="analyze" class="primary">✦ Analyze Review</button><span>Results are saved in local history.</span></div>
+<div id="error" class="error hidden"></div><div id="loading" class="muted hidden">Analyzing review...</div></section>
+<section id="results" class="hidden"><div class="result-heading"><div><div class="eyebrow">ANALYSIS COMPLETE</div><h2>Your review insights</h2></div></div>
+<div class="cards"><article class="panel result-card"><small>AUTHENTICITY PREDICTION</small><h3 id="fake">—</h3><p id="fakeDesc">Model prediction</p><div class="track"><i id="fakeBar"></i></div><div class="confidence"><span>Model confidence</span><b id="fakeConf">—</b></div></article>
+<article class="panel result-card"><small>SENTIMENT ANALYSIS</small><h3 id="sentiment">—</h3><p id="sentDesc">Overall tone of the review</p><div class="track"><i id="sentBar"></i></div><div class="confidence"><span>Model confidence</span><b id="sentConf">—</b></div></article></div>
+<div class="notice"><b>Note:</b> <span id="note"></span></div></section>
+<section class="how"><h2>How it works</h2><div class="steps"><article><b>01</b><h3>Enter review</h3><p>Paste customer feedback into the analyzer.</p></article><article><b>02</b><h3>AI processes text</h3><p>TF-IDF turns text into features for machine learning.</p></article><article><b>03</b><h3>Get insights</h3><p>See authenticity and sentiment predictions.</p></article></div></section>
+<footer>TrustMetrics AI · E-Commerce Fake Review &amp; Sentiment Detector</footer></main>
+<script src="{{ url_for('static', filename='script.js') }}"></script></body></html>

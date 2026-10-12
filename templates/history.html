@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>History | TrustMetrics AI</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head><body>
+<nav class="nav"><a class="brand" href="/">◈ TrustMetrics <span>AI</span></a><div><a href="/">Analyzer</a><a class="active" href="/history">History</a></div></nav>
+<main class="container"><section class="hero left"><div class="eyebrow">YOUR RECENT ANALYSES</div><h1>Review <span>history.</span></h1><p>Latest 50 analyses saved in your local database.</p></section>
+<div class="history-head"><h2>Previous reviews</h2><button id="clearHistory" class="link-button danger">Clear history</button></div>
+<div id="empty" class="empty {% if rows %}hidden{% endif %}">No reviews analyzed yet. <a href="/">Analyze your first review</a>.</div>
+<div id="historyList">{% for row in rows %}<article class="history-item"><div class="history-top"><span class="badge">{{ row["fake_label"] }}</span><span class="muted">{{ row["created_at"] }}</span></div><p>{{ row["review_text"] }}</p><div class="confidence"><span>Sentiment: <b>{{ row["sentiment"] }}</b></span><span>Confidence: {{ "%.1f"|format(row["fake_confidence"]) }}%</span></div></article>{% endfor %}</div>
+<footer><a href="/">← Back to analyzer</a></footer></main>
+<script>document.getElementById('clearHistory').addEventListener('click',async()=>{if(!confirm('Delete all saved history?'))return;const r=await fetch('/history/clear',{method:'POST'});if(r.ok){document.getElementById('historyList').innerHTML='';document.getElementById('empty').classList.remove('hidden')}});</script></body></html>
